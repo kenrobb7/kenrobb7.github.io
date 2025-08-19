@@ -1,0 +1,102 @@
+/*
+  简洁白色主题样式表
+  该样式表为网站提供了干净、简约的视觉效果，
+  采用大量留白、柔和的阴影和舒适的排版，
+  让访客的注意力集中在您的内容和作品上。
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #333333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 20px 40px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #0077cc;
+}
+
+section {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 28px;
+  border-left: 4px solid #0077cc;
+  padding-left: 12px;
+}
+
+#about {
+  margin-bottom: 40px;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.card {
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.card p {
+  margin: 0;
+  color: #555555;
+}
+
+.footer {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  text-align: center;
+  color: #777777;
+  border-top: 1px solid #eaeaea;
+  font-size: 14px;
+}
