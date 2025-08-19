@@ -8,23 +8,24 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #fdfdfd;
-  color: #333333;
+  /* 使用柔和的衬线字体搭配常规无衬线字体，营造艺术感 */
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #faf8f6;
+  color: #333;
   line-height: 1.6;
 }
 
 header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #eaeaea;
+  background-color: transparent;
   padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 32px;
-  font-weight: 700;
-}
+/* 标题在 hero 区域中展示，header 不再包含标题样式 */
 
 nav {
   margin-top: 10px;
@@ -33,13 +34,13 @@ nav {
 nav a {
   margin-right: 20px;
   text-decoration: none;
-  color: #333333;
+  color: #ffffff;
   font-weight: 500;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #0077cc;
+  color: #ffe6e6;
 }
 
 section {
@@ -51,7 +52,7 @@ section {
 section h2 {
   margin-top: 0;
   font-size: 28px;
-  border-left: 4px solid #0077cc;
+  border-left: 4px solid #f08a5d;
   padding-left: 12px;
 }
 
@@ -66,19 +67,19 @@ section h2 {
 }
 
 .card {
-  border: 1px solid #eaeaea;
+  border: 1px solid #f0e6e6;
   background-color: #ffffff;
   padding: 20px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
   color: inherit;
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
@@ -93,10 +94,54 @@ section h2 {
 }
 
 .footer {
-  background-color: #f7f7f7;
+  background-color: #faf0e6;
   padding: 20px 40px;
   text-align: center;
-  color: #777777;
-  border-top: 1px solid #eaeaea;
+  color: #777;
+  border-top: 1px solid #f0e6e6;
   font-size: 14px;
+}
+
+/* 新增 hero 区域样式：使用抽象画作为背景 */
+.hero {
+  height: 350px;
+  background-image: url('images/hero.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 1.4;
 }
