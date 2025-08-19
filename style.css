@@ -103,9 +103,17 @@ section h2 {
 }
 
 /* 新增 hero 区域样式：使用抽象画作为背景 */
+/*
+ * Hero section styles
+ *
+ * The hero background previously referenced an image inside an `images/` subfolder. However, on
+ * GitHub Pages static hosting, we chose to upload the image at the root of the repository for
+ * simplicity. Updating the path here ensures the hero background loads correctly on the deployed site.
+ */
 .hero {
   height: 350px;
-  background-image: url('images/hero.png');
+  /* Reference the hero image from the repository root instead of an images subdirectory. */
+  background-image: url('hero.png');
   background-size: cover;
   background-position: center;
   display: flex;
